@@ -1,14 +1,3 @@
-def convert_decimal_to_binary(decimal_value):
-    value_to_convert = decimal_value
-    binary_result = ''
-    while value_to_convert >= 1:
-        binary_result = str(value_to_convert % 2) + binary_result
-        value_to_convert = int(value_to_convert / 2)
-    return binary_result
-
-print(convert_decimal_to_binary(11))
-
-
 def convert_binary_to_decimal(binary_value):
     value_to_convert = str(binary_value)
     decimal_result = 0
@@ -20,7 +9,13 @@ def convert_binary_to_decimal(binary_value):
         current_digit += 1
     return decimal_result
 
-print(convert_binary_to_decimal(1011))
+def convert_decimal_to_binary(decimal_value):
+    value_to_convert = decimal_value
+    binary_result = ''
+    while value_to_convert >= 1:
+        binary_result = str(value_to_convert % 2) + binary_result
+        value_to_convert = int(value_to_convert / 2)
+    return binary_result
 
 def convert_base_to_decimal(value, base):
     value_to_convert = str(value)
@@ -33,4 +28,12 @@ def convert_base_to_decimal(value, base):
         current_digit += 1
     return decimal_result
 
-print(convert_base_to_decimal(3671,8))
+def convert_decimal_to_base(value, base):
+    value_to_convert = value
+    binary_result = ''
+    while value_to_convert >= 1:
+        binary_result = str(value_to_convert % base) + binary_result
+        value_to_convert = int(value_to_convert / base)
+    return binary_result
+
+print(convert_decimal_to_base(1977,8))
