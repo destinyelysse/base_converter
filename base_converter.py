@@ -21,3 +21,16 @@ def convert_binary_to_decimal(binary_value):
     return decimal_result
 
 print(convert_binary_to_decimal(1011))
+
+def convert_base_to_decimal(value, base):
+    value_to_convert = str(value)
+    decimal_result = 0
+    current_digit = 0
+    while len(value_to_convert) > 0:
+        binary_digit = value_to_convert[-1]
+        value_to_convert = value_to_convert[:-1]   
+        decimal_result += int(binary_digit) * (base**current_digit)
+        current_digit += 1
+    return decimal_result
+
+print(convert_base_to_decimal(3671,8))
