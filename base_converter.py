@@ -45,4 +45,9 @@ def convert_decimal_to_base(value, base):
         converted_digit = '0o'+converted_digit
     return converted_digit
 
-print(convert_decimal_to_base(1977,12))
+def convert_base_to_other_base(value, value_base, goal_base):
+    decimal_value = convert_base_to_decimal(value, value_base)
+    converted_value = convert_decimal_to_base(decimal_value, goal_base)
+    return converted_value
+
+print(str(convert_base_to_other_base(1977,10,8)))
